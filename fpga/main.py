@@ -147,9 +147,9 @@ class App(tk.Tk):
         
     def nova_senha(self, ser):
         ser.write('n'.encode('utf-8'))
-        self.firebase_new_password()
         if self.status == '1':    
             self.recebe_senha(ser)
+            self.firebase_new_password()
         
     def recebe_senha(self, ser):
         ser.flush()
